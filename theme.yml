@@ -4,7 +4,7 @@ filekinds:
   normal:
     foreground: &VERY_LIGHT_GRAY '#f8f8f2'
   directory:
-    foreground: &CYAN '#8be9fd'
+    foreground: &SOFT_CYAN '#8be9fd'
   symlink:
     foreground: &PURPLE '#bd93f9'
   pipe:
@@ -60,7 +60,7 @@ size:
   number_kilo:
     foreground: *VERY_LIGHT_GRAY
   number_mega:
-    foreground: *CYAN
+    foreground: *SOFT_CYAN
   number_giga:
     foreground: *PINK
   number_huge:
@@ -68,7 +68,7 @@ size:
   unit_byte:
     foreground: *VERY_LIGHT_GRAY
   unit_kilo:
-    foreground: *CYAN
+    foreground: *SOFT_CYAN
   unit_mega:
     foreground: *PINK
   unit_giga:
@@ -104,7 +104,7 @@ git:
   deleted:
     foreground: *LIGHT_RED
   renamed:
-    foreground: *CYAN
+    foreground: *SOFT_CYAN
   typechange:
     foreground: *PINK
   ignored:
@@ -152,11 +152,11 @@ file_type:
   temp:
     foreground: *LIGHT_RED
   compiled:
-    foreground: *CYAN
+    foreground: *SOFT_CYAN
   build:
     foreground: &GOLDENROD '#daa520'
   source:
-    foreground: *CYAN
+    foreground: *SOFT_CYAN
 
 punctuation:
   foreground: *DARK_BLUE
@@ -175,7 +175,7 @@ flags:
 symlink_path:
   foreground: *PURPLE
 control_char:
-  foreground: *CYAN
+  foreground: *SOFT_CYAN
 broken_symlink:
   foreground: *LIGHT_RED
 broken_path_overlay:
