@@ -1,0 +1,182 @@
+colourful: true
+
+filekinds:
+  normal:
+    foreground: &VERY_LIGHT_GRAY '#f8f8f2'
+  directory:
+    foreground: &CYAN '#8be9fd'
+  symlink:
+    foreground: &PURPLE '#bd93f9'
+  pipe:
+    foreground: &DARK_BLUE '#6272a4'
+  block_device:
+    foreground: &LIGHT_RED '#ff5555'
+  char_device:
+    foreground: *LIGHT_RED
+  socket:
+    foreground: &VERY_DARK_GRAYISH_BLUE '#44475a'
+  special:
+    foreground: &PINK '#ff79c6'
+  executable:
+    foreground: &LIME_GREEN '#50fa7b'
+  mount_point:
+    foreground: &VERY_LIGHT_ORANGE '#ffb86c'
+
+perms:
+  user_read:
+    foreground: *VERY_LIGHT_GRAY
+  user_write:
+    foreground: *VERY_LIGHT_ORANGE
+  user_execute_file:
+    foreground: *LIME_GREEN
+  user_execute_other:
+    foreground: *LIME_GREEN
+  group_read:
+    foreground: *VERY_LIGHT_GRAY
+  group_write:
+    foreground: *VERY_LIGHT_ORANGE
+  group_execute:
+    foreground: *LIME_GREEN
+  other_read:
+    foreground: *VERY_LIGHT_GRAY
+  other_write:
+    foreground: *VERY_LIGHT_ORANGE
+  other_execute:
+    foreground: *LIME_GREEN
+  special_user_file:
+    foreground: *PINK
+  special_other:
+    foreground: *DARK_BLUE
+  attribute:
+    foreground: *VERY_LIGHT_GRAY
+
+size:
+  major:
+    foreground: &VERY_SOFT_YELLOW '#f1fa8c'
+  minor:
+    foreground: *PURPLE
+  number_byte:
+    foreground: *VERY_LIGHT_GRAY
+  number_kilo:
+    foreground: *VERY_LIGHT_GRAY
+  number_mega:
+    foreground: *CYAN
+  number_giga:
+    foreground: *PINK
+  number_huge:
+    foreground: *PINK
+  unit_byte:
+    foreground: *VERY_LIGHT_GRAY
+  unit_kilo:
+    foreground: *CYAN
+  unit_mega:
+    foreground: *PINK
+  unit_giga:
+    foreground: *PINK
+  unit_huge:
+    foreground: *VERY_LIGHT_ORANGE
+
+users:
+  user_you:
+    foreground: *VERY_LIGHT_GRAY
+  user_root:
+    foreground: *LIGHT_RED
+  user_other:
+    foreground: *PINK
+  group_yours:
+    foreground: *VERY_LIGHT_GRAY
+  group_other:
+    foreground: *DARK_BLUE
+  group_root:
+    foreground: *LIGHT_RED
+
+links:
+  normal:
+    foreground: *PURPLE
+  multi_link_file:
+    foreground: *VERY_LIGHT_ORANGE
+
+git:
+  new:
+    foreground: *LIME_GREEN
+  modified:
+    foreground: *VERY_LIGHT_ORANGE
+  deleted:
+    foreground: *LIGHT_RED
+  renamed:
+    foreground: *CYAN
+  typechange:
+    foreground: *PINK
+  ignored:
+    foreground: *DARK_BLUE
+  conflicted:
+    foreground: *LIGHT_RED
+
+git_repo:
+  branch_main:
+    foreground: *VERY_LIGHT_GRAY
+  branch_other:
+    foreground: *PINK
+  git_clean:
+    foreground: *LIME_GREEN
+  git_dirty:
+    foreground: *LIGHT_RED
+
+security_context:
+  colon:
+    foreground: *DARK_BLUE
+  user:
+    foreground: *VERY_LIGHT_GRAY
+  role:
+    foreground: *PINK
+  typ:
+    foreground: *DARK_BLUE
+  range:
+    foreground: *PINK
+
+file_type:
+  image:
+    foreground: *VERY_LIGHT_ORANGE
+  video:
+    foreground: *LIGHT_RED
+  music:
+    foreground: *LIME_GREEN
+  lossless:
+    foreground: *LIME_GREEN
+  crypto:
+    foreground: *DARK_BLUE
+  document:
+    foreground: *VERY_LIGHT_GRAY
+  compressed:
+    foreground: *PINK
+  temp:
+    foreground: *LIGHT_RED
+  compiled:
+    foreground: *CYAN
+  build:
+    foreground: &GOLDENROD '#daa520'
+  source:
+    foreground: *CYAN
+
+punctuation:
+  foreground: *DARK_BLUE
+date:
+  foreground: &LIGHT_GRAY '#cccccc'
+inode:
+  foreground: *VERY_LIGHT_GRAY
+blocks:
+  foreground: *VERY_LIGHT_GRAY
+header:
+  foreground: *VERY_LIGHT_GRAY
+octal:
+  foreground: *LIME_GREEN
+flags:
+  foreground: *PINK
+symlink_path:
+  foreground: *PURPLE
+control_char:
+  foreground: *CYAN
+broken_symlink:
+  foreground: *LIGHT_RED
+broken_path_overlay:
+  foreground: *DARK_BLUE
