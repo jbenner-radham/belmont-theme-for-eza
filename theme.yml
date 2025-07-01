@@ -22,23 +22,6 @@ filekinds:
   mount_point:
     foreground: &VERY_LIGHT_ORANGE '#ffb86c'
 
-filenames:
-  .idea:
-    icon:
-      glyph: 
-  .markdownlint.yaml:
-    icon:
-      glyph: 󰅎
-  .pre-commit-hooks.yaml:
-    icon:
-      glyph: 󰛢
-  .python-version:
-    icon:
-      glyph: 
-  LICENSE:
-    icon:
-      glyph: 
-
 perms:
   user_read:
     foreground: *VERY_LIGHT_GRAY
@@ -99,7 +82,7 @@ users:
   user_root:
     foreground: *LIGHT_RED
   user_other:
-    foreground: *PINK
+    foreground: &LIGHT_GRAY '#cccccc'
   group_yours:
     foreground: *VERY_LIGHT_GRAY
   group_other:
@@ -178,7 +161,7 @@ file_type:
 punctuation:
   foreground: *DARK_BLUE
 date:
-  foreground: &LIGHT_GRAY '#cccccc'
+  foreground: *LIGHT_GRAY
 inode:
   foreground: *VERY_LIGHT_GRAY
 blocks:
@@ -197,3 +180,20 @@ broken_symlink:
   foreground: *LIGHT_RED
 broken_path_overlay:
   foreground: *DARK_BLUE
+
+filenames:
+  .idea:
+    icon:
+      glyph: 
+  .markdownlint.yaml:
+    icon:
+      glyph: 󰅎
+  .pre-commit-hooks.yaml:
+    icon:
+      glyph: 󰛢
+  .python-version:
+    icon:
+      glyph: 
+  LICENSE:
+    icon:
+      glyph: 
