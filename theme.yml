@@ -197,3 +197,11 @@ filenames:
   LICENSE:
     icon:
       glyph: 
+
+extensions:
+  yaml:
+    icon:
+      glyph: 
+  yml:
+    icon:
+      glyph: 
