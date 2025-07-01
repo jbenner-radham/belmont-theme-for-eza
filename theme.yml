@@ -188,6 +188,9 @@ filenames:
   .markdownlint.yaml:
     icon:
       glyph: 󰅎
+  .pre-commit-config.yaml:
+    icon:
+      glyph: 󰛢
   .pre-commit-hooks.yaml:
     icon:
       glyph: 󰛢
