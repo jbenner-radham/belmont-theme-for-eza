@@ -188,6 +188,9 @@ filenames:
   .markdownlint.yaml:
     icon:
       glyph: 󰅎
+  .node-version:
+    icon:
+      glyph: 
   .pre-commit-config.yaml:
     icon:
       glyph: 󰛢
@@ -197,9 +200,30 @@ filenames:
   .python-version:
     icon:
       glyph: 
+  CHANGELOG.md:
+    icon:
+      glyph: 
   LICENSE:
     icon:
       glyph: 
+  LICENSE.md:
+    icon:
+      glyph: 
+  LICENSE.txt:
+    icon:
+      glyph: 
+  LICENSE-APACHE:
+    icon:
+      glyph: 
+  LICENSE-MIT:
+    icon:
+      glyph: 
+  theme.yaml:
+    icon:
+      glyph: 
+  theme.yml:
+    icon:
+      glyph: 
 
 extensions:
   cjs:
