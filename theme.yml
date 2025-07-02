@@ -234,13 +234,15 @@ extensions:
       foreground: *SOFT_CYAN
       is_bold: true
     icon:
-      foreground: *SOFT_CYAN
+      style:
+        foreground: *SOFT_CYAN
   mjs:
     filename:
       foreground: *SOFT_CYAN
       is_bold: true
     icon:
-      foreground: *SOFT_CYAN
+      style:
+        foreground: *SOFT_CYAN
   yaml:
     icon:
       glyph: 
