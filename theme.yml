@@ -200,6 +200,9 @@ filenames:
   .python-version:
     icon:
       glyph: 
+  .vscode:
+    icon:
+      glyph: 
   CHANGELOG.md:
     icon:
       glyph: 
