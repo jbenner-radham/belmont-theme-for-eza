@@ -1,0 +1,21 @@
+{
+  "name": "belmont-theme-for-eza",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/jbenner-radham/belmont-theme-for-eza#readme",
+  "bugs": {
+    "url": "https://github.com/jbenner-radham/belmont-theme-for-eza/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbenner-radham/belmont-theme-for-eza.git"
+  },
+  "license": "MIT",
+  "author": "James Benner",
+  "type": "module",
+  "main": "theme.yml",
+  "scripts": {
+    "make-example-dir": "node ./scripts/make-example-dir.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
