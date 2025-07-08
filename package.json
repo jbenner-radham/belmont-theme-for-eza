@@ -16,6 +16,14 @@
   "main": "theme.yml",
   "scripts": {
     "make-example-dir": "node ./scripts/make-example-dir.mjs",
+    "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "shellcheck": "^3.1.0",
+    "sort-package-json": "^3.4.0"
   }
 }

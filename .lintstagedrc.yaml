@@ -1,0 +1,4 @@
+'*.mjs': prettier --write
+'*.sh': npx shellcheck
+'*.{yaml,yml}': prettier --write
+package.json: sort-package-json
