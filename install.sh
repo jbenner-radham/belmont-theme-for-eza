@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 
-echo
+# Reference: https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo
+
+printf "\n"
 
 # Taken from: https://github.com/Homebrew/install/blob/efda6e8a4623dd9a3046faf4991cbfb40bea8d17/install.sh#L9-L12
 abort() {
@@ -63,24 +65,23 @@ if [ -f "$BELMONT_SYMLINK_TARGET" ]; then
 fi
 
 if [ -n "$*" ]; then
-  echo "The following new directory (or directories) will be created:"
+  printf "The following new directory (or directories) will be created:\n"
 
   for dir in "$@"; do
-    echo "  ${dir}"
+    printf "  %s\n" "${dir}"
   done
 
-  echo
+  printf "\n"
 fi
 
 if [ -n "$BELMONT_SYMLINK_TARGET" ]; then
-  echo "The following new symlink will be created:"
-  echo "  ${BELMONT_SYMLINK_TARGET}"
-  echo
+  printf "The following new symlink will be created:\n"
+  printf "  %s\n" "${BELMONT_SYMLINK_TARGET}"
 fi
 
 printf "Do you wish to proceed? [y/N]: "
 read -r REPLY
-echo
+printf "\n"
 
 if [ ! "$REPLY" = Y ] && [ ! "$REPLY" = y ]; then
   exit 0
@@ -100,4 +101,4 @@ elif [ "$(uname)" = "Linux" ]; then
   ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yml" "${BELMONT_SYMLINK_TARGET}"
 fi
 
-echo "Belmont for eza installed successfully!"
+printf "Belmont for eza installed successfully!\n"
