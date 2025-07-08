@@ -19,6 +19,10 @@ bash -c "$(curl -fsSl https://raw.githubusercontent.com/jbenner-radham/belmont-t
 > [!NOTE]
 > Using `bash` in the above command should be fine for most users. But, if needed you can change it to the shell of your choice. Please note however, that the install script requires a POSIX compatible shell.
 
+<details>
+
+<summary>Additional install methods.</summary>
+
 Alternatively, if you would like to inspect the install script before running it you can perform the following:
 
 ```shell
@@ -43,6 +47,7 @@ If you prefer to install your theme manually, `eza` will look for a theme using 
 6. If `$HOME/.config/eza/theme.yaml` exists then it will be loaded.
 
 Choose your destination from the above and then copy or symlink `theme.yml` into the desired location.
+</details>
 
 ### macOS
 
@@ -54,6 +59,10 @@ zsh -c "$(curl -fsSl https://raw.githubusercontent.com/jbenner-radham/belmont-th
 
 > [!NOTE]
 > Using `zsh` in the above command should be fine for most users. But, if needed you can change it to the shell of your choice. Please note however, that the install script requires a POSIX compatible shell.
+
+<details>
+
+<summary>Additional install methods.</summary>
 
 Alternatively, if you would like to inspect the install script before running it you can perform the following:
 
@@ -77,6 +86,7 @@ If you prefer to install your theme manually, `eza` will look for a theme using 
 4. If `$HOME/Library/Application Support/eza/theme.yaml` exists then it will be loaded.
 
 Choose your destination from the above and then copy or symlink `theme.yml` into the desired location.
+</details>
 
 ### Windows
 
