@@ -13,7 +13,7 @@ Install
 If you have `git` installed you can run the following command to install the theme:
 
 ```shell
-bash -c "$(curl -fsSl https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
+bash -c "$(curl -LSfs https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
 ```
 
 > [!NOTE]
@@ -27,7 +27,7 @@ Alternatively, if you would like to inspect the install script before running it
 
 ```shell
 test -f "install.sh" && echo "An \"install.sh\" file is already present in this directory. The file being downloaded will now be named either \"install.sh.1\" or some variant thereof."
-curl -lO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
+curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
 ```
 
 Then inspect the downloaded `install.sh` file and resume with the following (assuming your file is `install.sh` and not `install.sh.1` or some variant thereof):
@@ -54,7 +54,7 @@ Choose your destination from the above and then copy or symlink `theme.yml` into
 If you have `git` installed you can run the following command to install the theme:
 
 ```shell
-zsh -c "$(curl -fsSl https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
+zsh -c "$(curl -LSfs https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
 ```
 
 > [!NOTE]
@@ -68,7 +68,7 @@ Alternatively, if you would like to inspect the install script before running it
 
 ```shell
 test -f "install.sh" && echo "An \"install.sh\" file is already present in this directory. The file being downloaded will now be named either \"install.sh.1\" or some variant thereof."
-curl -lO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
+curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
 ```
 
 Then inspect the downloaded `install.sh` file and resume with the following (assuming your file is `install.sh` and not `install.sh.1` or some variant thereof):
