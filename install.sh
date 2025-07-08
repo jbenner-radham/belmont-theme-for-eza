@@ -71,7 +71,7 @@ if [ -n "$*" ]; then
   printf "The following new directory (or directories) will be created:\n"
 
   for dir in "$@"; do
-    printf "  %s\n" "${dir}"
+    printf "  %s%s%s\n" "$(tput bold)" "${dir}" "$(tput sgr0)"
   done
 
   printf "\n"
@@ -79,7 +79,8 @@ fi
 
 if [ -n "$BELMONT_SYMLINK_TARGET" ]; then
   printf "The following new symlink will be created:\n"
-  printf "  %s\n" "${BELMONT_SYMLINK_TARGET}"
+  printf "  %s%s%s\n" "$(tput bold)" "${BELMONT_SYMLINK_TARGET}" "$(tput sgr0)"
+  printf "\n"
 fi
 
 printf "Do you wish to proceed? [y/N]: "
