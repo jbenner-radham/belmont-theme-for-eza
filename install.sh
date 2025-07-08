@@ -14,15 +14,15 @@ abort() {
 }
 
 if [ -n "$LS_COLORS" ]; then
-  abort "The \$LS_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again."
+  abort "The $(tput bold)\$LS_COLORS$(tput sgr0) environment variable is set. This will override any theme file installation. Please unset it and try again."
 fi
 
 if [ -n "$EXA_COLORS" ]; then
-  abort "The \$EXA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again."
+  abort "The $(tput bold)\$EXA_COLORS$(tput sgr0) environment variable is set. This will override any theme file installation. Please unset it and try again."
 fi
 
 if [ -n "$EZA_COLORS" ]; then
-  abort "The \$EZA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again."
+  abort "The $(tput bold)\$EZA_COLORS$(tput sgr0) environment variable is set. This will override any theme file installation. Please unset it and try again."
 fi
 
 if ! command -v git > /dev/null; then
