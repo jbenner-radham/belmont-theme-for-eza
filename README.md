@@ -103,3 +103,15 @@ Choose your destination from the above and then copy or symlink `theme.yml` into
 4. If `%AppData%\eza\theme.yaml` exists then it will be loaded.
 
 Choose your destination from the above and then copy or symlink `theme.yml` into the desired location.
+
+Upgrade
+-------
+
+### Linux & macOS
+
+If you installed **Belmont** via one of the `install.sh` script methods, you can upgrade via the following:
+
+```shell
+cd "${XDG_DATA_HOME:-$HOME/.local/share}/belmont-theme-for-eza"
+git pull
+```
