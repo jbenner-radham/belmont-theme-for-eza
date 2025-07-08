@@ -26,7 +26,7 @@ if [ -n "$EZA_COLORS" ]; then
 fi
 
 if ! command -v git > /dev/null; then
-  abort "Git cannot be found. Please install it or add it to your system path and retry."
+  abort "The $(tput bold)git$(tput sgr0) binary cannot be found. Please install it or add it to your system path and retry."
 fi
 
 BELMONT_REPO_NAME="belmont-theme-for-eza"
