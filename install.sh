@@ -64,7 +64,7 @@ if [ -z "$BELMONT_SYMLINK_TARGET" ]; then
 fi
 
 if [ -f "$BELMONT_SYMLINK_TARGET" ]; then
-  abort "An eza theme is already installed (${BELMONT_SYMLINK_TARGET}). If desired, please remove it and try again."
+  abort "An eza theme is already installed at $(tput bold)${BELMONT_SYMLINK_TARGET}$(tput sgr0). If desired, please remove it and try again."
 fi
 
 if [ -n "$*" ]; then
