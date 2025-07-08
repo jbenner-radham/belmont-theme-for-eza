@@ -1,3 +1,4 @@
+'*.md': markdownlint --fix
 '*.mjs': prettier --write
 '*.sh': npx shellcheck
 '*.{yaml,yml}': prettier --write

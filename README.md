@@ -17,36 +17,54 @@ bash -c "$(curl -LSfs https://raw.githubusercontent.com/jbenner-radham/belmont-t
 ```
 
 > [!NOTE]
-> Using `bash` in the above command should be fine for most users. But, if needed you can change it to the shell of your choice. Please note however, that the install script requires a POSIX compatible shell.
+> Using `bash` in the above command should be fine for most users. But, if
+> needed you can change it to the shell of your choice. Please note however,
+> that the install script requires a POSIX compatible shell.
 
 <details>
 
 <summary>Additional install methods.</summary>
 
-Alternatively, if you would like to inspect the install script before running it you can perform the following:
+Alternatively, if you would like to inspect the install script before running
+it you can perform the following:
 
 ```shell
-test -f "install.sh" && echo "An \"install.sh\" file is already present in this directory. The file being downloaded will now be named either \"install.sh.1\" or some variant thereof."
+test -f "install.sh" && \
+  printf "%s%s%s%s%s\n\n" \
+    "$(tput bold)" \
+    "An \"install.sh\" file is already present in this directory. The" \
+    " file being downloaded will now be named either \"install.sh.1\"" \
+    " or some variant thereof." \
+    "$(tput sgr0)"
 curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
 ```
 
-Then inspect the downloaded `install.sh` file and resume with the following (assuming your file is `install.sh` and not `install.sh.1` or some variant thereof):
+Then inspect the downloaded `install.sh` file and resume with the following
+(assuming your file is `install.sh` and not `install.sh.1` or some variant
+thereof):
 
 ```shell
 chmod u+x install.sh
 ./install.sh
 ```
 
-If you prefer to install your theme manually, `eza` will look for a theme using the steps below in the following order:
+If you prefer to install your theme manually, `eza` will look for a theme using
+the steps below in the following order:
 
-1. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yml` will be loaded if it exists.
-2. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yaml` will be loaded if it exists.
-3. If `$XDG_CONFIG_HOME` is set then `$XDG_CONFIG_HOME/eza/theme.yml` will be loaded if it exists.
-4. If `$XDG_CONFIG_HOME` is set then `$XDG_CONFIG_HOME/eza/theme.yaml` will be loaded if it exists.
+1. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yml` will be loaded
+   if it exists.
+2. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yaml` will be loaded
+   if it exists.
+3. If `$XDG_CONFIG_HOME` is set then `$XDG_CONFIG_HOME/eza/theme.yml` will be
+   loaded if it exists.
+4. If `$XDG_CONFIG_HOME` is set then `$XDG_CONFIG_HOME/eza/theme.yaml` will be
+   loaded if it exists.
 5. If `$HOME/.config/eza/theme.yml` exists then it will be loaded.
 6. If `$HOME/.config/eza/theme.yaml` exists then it will be loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yml` into the desired location.
+Choose your destination from the above and then copy or symlink `theme.yml` into
+the desired location.
+
 </details>
 
 ### macOS
@@ -58,58 +76,81 @@ zsh -c "$(curl -LSfs https://raw.githubusercontent.com/jbenner-radham/belmont-th
 ```
 
 > [!NOTE]
-> Using `zsh` in the above command should be fine for most users. But, if needed you can change it to the shell of your choice. Please note however, that the install script requires a POSIX compatible shell.
+> Using `zsh` in the above command should be fine for most users. But, if needed
+> you can change it to the shell of your choice. Please note however, that the
+> install script requires a POSIX compatible shell.
 
 <details>
 
 <summary>Additional install methods.</summary>
 
-Alternatively, if you would like to inspect the install script before running it you can perform the following:
+Alternatively, if you would like to inspect the install script before running it
+you can perform the following:
 
 ```shell
-test -f "install.sh" && echo "An \"install.sh\" file is already present in this directory. The file being downloaded will now be named either \"install.sh.1\" or some variant thereof."
+test -f "install.sh" && \
+  printf "%s%s%s%s%s\n\n" \
+    "$(tput bold)" \
+    "An \"install.sh\" file is already present in this directory. The" \
+    " file being downloaded will now be named either \"install.sh.1\"" \
+    " or some variant thereof." \
+    "$(tput sgr0)"
 curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
 ```
 
-Then inspect the downloaded `install.sh` file and resume with the following (assuming your file is `install.sh` and not `install.sh.1` or some variant thereof):
+Then inspect the downloaded `install.sh` file and resume with the following
+(assuming your file is `install.sh` and not `install.sh.1` or some variant
+thereof):
 
 ```shell
 chmod u+x install.sh
 ./install.sh
 ```
 
-If you prefer to install your theme manually, `eza` will look for a theme using the steps below in the following order:
+If you prefer to install your theme manually, `eza` will look for a theme using
+the steps below in the following order:
 
-1. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yml` will be loaded if it exists.
-2. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yaml` will be loaded if it exists.
-3. If `$HOME/Library/Application Support/eza/theme.yml` exists then it will be loaded.
-4. If `$HOME/Library/Application Support/eza/theme.yaml` exists then it will be loaded.
+1. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yml` will be loaded
+   if it exists.
+2. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yaml` will be loaded
+   if it exists.
+3. If `$HOME/Library/Application Support/eza/theme.yml` exists then it will be
+   loaded.
+4. If `$HOME/Library/Application Support/eza/theme.yaml` exists then it will be
+   loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yml` into the desired location.
+Choose your destination from the above and then copy or symlink `theme.yml` into
+the desired location.
+
 </details>
 
 ### Windows
 
 > [!CAUTION]
-> I haven't been able to verify the Windows install steps. This information has been gleaned
-> from reading `eza`'s documentation and source code. If someone would care to confirm or deny
-> the validity of these steps via an issue it would be much appreciated.
+> I haven't been able to verify the Windows install steps. This information has
+> been gleaned from reading `eza`'s documentation and source code. If someone
+> would care to confirm or deny the validity of these steps via an issue it
+> would be much appreciated.
 
 `eza` will look for a theme using the steps below in the following order:
 
-1. If `%EZA_CONFIG_DIR%` is set then `%EZA_CONFIG_DIR%\theme.yml` will be loaded if it exists.
-2. If `%EZA_CONFIG_DIR%` is set then `%EZA_CONFIG_DIR%\theme.yaml` will be loaded if it exists.
+1. If `%EZA_CONFIG_DIR%` is set then `%EZA_CONFIG_DIR%\theme.yml` will be loaded
+   if it exists.
+2. If `%EZA_CONFIG_DIR%` is set then `%EZA_CONFIG_DIR%\theme.yaml` will be
+   loaded if it exists.
 3. If `%AppData%\eza\theme.yml` exists then it will be loaded.
 4. If `%AppData%\eza\theme.yaml` exists then it will be loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yml` into the desired location.
+Choose your destination from the above and then copy or symlink `theme.yml` into
+the desired location.
 
 Upgrade
 -------
 
 ### Linux & macOS
 
-If you installed **Belmont** via one of the `install.sh` script methods, you can upgrade via the following:
+If you installed **Belmont** via one of the `install.sh` script methods, you can
+upgrade via the following:
 
 ```shell
 cd "${XDG_DATA_HOME:-$HOME/.local/share}/belmont-theme-for-eza"
