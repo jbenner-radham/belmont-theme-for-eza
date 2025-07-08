@@ -2,24 +2,26 @@
 
 echo
 
-if [ -n "$LS_COLORS" ]; then
-  echo "The \$LS_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again." >&2
+# Taken from: https://github.com/Homebrew/install/blob/efda6e8a4623dd9a3046faf4991cbfb40bea8d17/install.sh#L9-L12
+abort() {
+  printf "%s\n" "$@" >&2
   exit 1
+}
+
+if [ -n "$LS_COLORS" ]; then
+  abort "The \$LS_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again."
 fi
 
 if [ -n "$EXA_COLORS" ]; then
-  echo "The \$EXA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again." >&2
-  exit 1
+  abort "The \$EXA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again."
 fi
 
 if [ -n "$EZA_COLORS" ]; then
-  echo "The \$EZA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again." >&2
-  exit 1
+  abort "The \$EZA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again."
 fi
 
 if ! command -v git > /dev/null; then
-  echo "Git cannot be found. Please install it or add it to your system path and retry." >&2
-  exit 1
+  abort "Git cannot be found. Please install it or add it to your system path and retry."
 fi
 
 BELMONT_REPO_NAME="belmont-theme-for-eza"
@@ -53,13 +55,11 @@ elif [ "$(uname)" = "Linux" ]; then
 fi
 
 if [ -z "$BELMONT_SYMLINK_TARGET" ]; then
-  echo "Cannot detect a valid installation scenario to process." >&2
-  exit 1
+  abort "Cannot detect a valid installation scenario to process."
 fi
 
 if [ -f "$BELMONT_SYMLINK_TARGET" ]; then
-  echo "An eza theme is already installed (${BELMONT_SYMLINK_TARGET}). If desired, please remove it and try again." >&2
-  exit 1
+  abort "An eza theme is already installed (${BELMONT_SYMLINK_TARGET}). If desired, please remove it and try again."
 fi
 
 if [ -n "$*" ]; then
