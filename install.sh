@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 
-# Reference: https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo
+# Reference:
+#   - https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo
+#   - https://www.baeldung.com/linux/posix-shell-array
+#   - https://steinbaugh.com/posts/posix.html
 
 printf "\n"
 
