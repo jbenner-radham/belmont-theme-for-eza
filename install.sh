@@ -105,4 +105,4 @@ elif [ "$(uname)" = "Linux" ]; then
   ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yml" "${BELMONT_SYMLINK_TARGET}"
 fi
 
-printf "Belmont for eza installed successfully!\n"
+printf "%sBelmont for eza installed successfully!%s\n" "$(tput bold)" "$(tput sgr0)"
