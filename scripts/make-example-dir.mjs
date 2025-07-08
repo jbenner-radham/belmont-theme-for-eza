@@ -35,12 +35,14 @@ const filenames = [
   'theme.yaml'
 ];
 const examplePath = path.resolve(import.meta.dirname, '..', 'example');
-const dirnames = [
-  'src'
-];
+const dirnames = ['src'];
 
 fs.rmSync(examplePath, { force: true, recursive: true });
-fs.mkdirSync(examplePath, { recursive: true })
-filenames.forEach(filename => fs.writeFileSync(path.join(examplePath, filename), ''))
-dirnames.forEach(dirname => fs.mkdirSync(path.join(examplePath, dirname), { recursive: true }));
+fs.mkdirSync(examplePath, { recursive: true });
+filenames.forEach((filename) =>
+  fs.writeFileSync(path.join(examplePath, filename), '')
+);
+dirnames.forEach((dirname) =>
+  fs.mkdirSync(path.join(examplePath, dirname), { recursive: true })
+);
 fs.chmodSync(path.join(examplePath, 'file'), 0o755);
