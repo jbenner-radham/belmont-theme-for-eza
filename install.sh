@@ -2,6 +2,21 @@
 
 echo
 
+if [ -n "$LS_COLORS" ]; then
+  echo "The \$LS_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again." >&2
+  exit 1
+fi
+
+if [ -n "$EXA_COLORS" ]; then
+  echo "The \$EXA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again." >&2
+  exit 1
+fi
+
+if [ -n "$EZA_COLORS" ]; then
+  echo "The \$EZA_COLORS environment variable is set. This will override any theme file installation. Please unset it and try again." >&2
+  exit 1
+fi
+
 if ! command -v git > /dev/null; then
   echo "Git cannot be found. Please install it or add it to your system path and retry." >&2
   exit 1
