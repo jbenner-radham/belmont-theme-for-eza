@@ -108,7 +108,7 @@ git:
   typechange:
     foreground: *PINK
   ignored:
-    foreground: *DARK_BLUE
+    foreground: *VERY_DARK_GRAYISH_BLUE
   conflicted:
     foreground: *LIGHT_RED
 
