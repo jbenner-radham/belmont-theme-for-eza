@@ -51,31 +51,37 @@ perms:
     foreground: *VERY_LIGHT_GRAY
 
 size:
+  # I'm not sure if the `major`, or `minor` properties do anything.
   major:
     foreground: &VERY_SOFT_YELLOW '#f1fa8c'
   minor:
     foreground: *PURPLE
   number_byte:
-    foreground: *VERY_LIGHT_GRAY
+    foreground: &LIGHT_GRAY '#cccccc'
+    is_bold: false
   number_kilo:
-    foreground: *VERY_LIGHT_GRAY
+    foreground: &ALT_VERY_LIGHT_GRAY_DARKER '#d9d9d9'
+    is_bold: false
   number_mega:
-    foreground: *VERY_LIGHT_GRAY
+    foreground: &ALT_VERY_LIGHT_GRAY_LIGHTER '#e5e5e5'
     is_bold: true
   number_giga:
-    foreground: *PINK
+    foreground: &WHITE '#ffffff'
+    is_bold: true
   number_huge:
-    foreground: *PINK
+    foreground: &PALE_RED '#ffb6c1'
+    is_bold: true
+  # I'm not really sure if these `unit_*` properties do anything.
   unit_byte:
-    foreground: *VERY_LIGHT_GRAY
+    foreground: *LIGHT_GRAY
   unit_kilo:
-    foreground: *VERY_LIGHT_GRAY
+    foreground: *ALT_VERY_LIGHT_GRAY_DARKER
   unit_mega:
-    foreground: *VERY_LIGHT_GRAY
+    foreground: *ALT_VERY_LIGHT_GRAY_LIGHTER
   unit_giga:
-    foreground: *PINK
+    foreground: *WHITE
   unit_huge:
-    foreground: *VERY_LIGHT_ORANGE
+    foreground: *PALE_RED
 
 users:
   user_you:
@@ -83,7 +89,7 @@ users:
   user_root:
     foreground: *LIGHT_RED
   user_other:
-    foreground: &LIGHT_GRAY '#cccccc'
+    foreground: *LIGHT_GRAY
   group_yours:
     foreground: *VERY_LIGHT_GRAY
   group_other:
