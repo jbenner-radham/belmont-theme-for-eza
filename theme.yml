@@ -224,6 +224,30 @@ filenames:
   prettier.config.ts:
     icon:
       glyph: 
+  .prettierrc.mjs:
+    icon:
+      glyph: 
+  prettier.config.mjs:
+    icon:
+      glyph: 
+  .prettierrc.mts:
+    icon:
+      glyph: 
+  prettier.config.mts:
+    icon:
+      glyph: 
+  .prettierrc.cjs:
+    icon:
+      glyph: 
+  prettier.config.cjs:
+    icon:
+      glyph: 
+  .prettierrc.cts:
+    icon:
+      glyph: 
+  prettier.config.cts:
+    icon:
+      glyph: 
   .prettierrc.toml:
     icon:
       glyph: 
