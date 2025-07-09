@@ -5,12 +5,8 @@ import path from 'node:path';
 const filenames = [
   '.pre-commit-config.yaml',
   'arch.iso',
-  'Cargo.lock',
   'Cargo.toml',
-  'cfg.ini',
-  'file',
-  'file.cjs',
-  'file.cpp',
+  'bin',
   'file.js',
   'file.mp4',
   'file.pdf',
@@ -22,18 +18,12 @@ const filenames = [
   'file.tar.gz',
   'file.toml',
   'file.yml',
-  'justfile',
-  'LICENSE',
   'Makefile',
   'nginx.conf',
   'package.json',
-  'package-lock.json',
   'pyproject.toml',
   'README.md',
-  'resume.docx',
-  'song.flac',
-  'song.mp3',
-  'theme.yaml'
+  'song.flac'
 ];
 const examplePath = path.resolve(import.meta.dirname, '..', 'example');
 const dirnames = ['src'];
@@ -60,4 +50,4 @@ filenames.forEach((filename) => {
 dirnames.forEach((dirname) =>
   fs.mkdirSync(path.join(examplePath, dirname), { recursive: true })
 );
-fs.chmodSync(path.join(examplePath, 'file'), 0o755);
+fs.chmodSync(path.join(examplePath, 'bin'), 0o755);
