@@ -60,7 +60,8 @@ size:
   number_kilo:
     foreground: *VERY_LIGHT_GRAY
   number_mega:
-    foreground: *SOFT_CYAN
+    foreground: *VERY_LIGHT_GRAY
+    is_bold: true
   number_giga:
     foreground: *PINK
   number_huge:
@@ -68,9 +69,9 @@ size:
   unit_byte:
     foreground: *VERY_LIGHT_GRAY
   unit_kilo:
-    foreground: *SOFT_CYAN
+    foreground: *VERY_LIGHT_GRAY
   unit_mega:
-    foreground: *PINK
+    foreground: *VERY_LIGHT_GRAY
   unit_giga:
     foreground: *PINK
   unit_huge:
@@ -108,7 +109,8 @@ git:
   typechange:
     foreground: *PINK
   ignored:
-    foreground: &VERY_LIGHT_BLUE '#7676ff'
+    foreground: *DARK_BLUE #&VERY_LIGHT_BLUE '#7676ff'
+    is_dimmed: false
   conflicted:
     foreground: *LIGHT_RED
 
