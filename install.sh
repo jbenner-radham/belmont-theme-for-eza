@@ -92,7 +92,10 @@ if [ ! "$REPLY" = Y ] && [ ! "$REPLY" = y ]; then
 fi
 
 mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}"
-git clone --quiet https://github.com/jbenner-radham/belmont-theme-for-eza.git "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
+
+if [ ! -d "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" ]; then
+  git clone --quiet https://github.com/jbenner-radham/belmont-theme-for-eza.git "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
+fi
 
 if [ -n "${EZA_CONFIG_DIR}" ]; then
   mkdir -p "${EZA_CONFIG_DIR}"
