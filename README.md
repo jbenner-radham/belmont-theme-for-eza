@@ -156,3 +156,24 @@ upgrade via the following:
 cd "${XDG_DATA_HOME:-$HOME/.local/share}/belmont-theme-for-eza"
 git pull
 ```
+
+Troubleshooting
+---------------
+
+### "Some of my icons are not displaying properly. Why is that?"
+
+Some icons used by **Belmont** are somewhat new to [Nerd Fonts](https://www.nerdfonts.com/).
+The YAML file type icon immediately jumps to mind.
+
+Just try redownloading and installing your desired font(s) to ensure you have
+the latest version available.
+
+If you're on Linux run `fc-cache -fv` to rebuild your font cache as well. You
+may have to reboot after this for changes to fully take affect.
+
+### "Why don't my theme colors match what's in the example screenshot?"
+
+There are multiple environment variables that if set can override YAML based
+themes. If you're on Linux or macOS try running the `install.sh` script. It will
+check for common problems and notify you if it finds any. Including if any of
+the problematic environment variables are set.

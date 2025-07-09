@@ -207,6 +207,8 @@ MD043:
     - '*'
     - '## Upgrade'
     - '*'
+    - '## Troubleshooting'
+    - '*'
   # Match case of headings
   match_case: false
 
