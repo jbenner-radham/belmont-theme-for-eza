@@ -38,7 +38,7 @@ elif [ ! -d "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" ]; then
 fi
 
 if [ -n "${EZA_CONFIG_DIR}" ] && [ ! -d "${EZA_CONFIG_DIR}" ]; then
-  set -- "$@" "${EZA_CONFIG_DIR}" "${EZA_CONFIG_DIR}/${BELMONT_REPO_NAME}"
+  set -- "$@" "${EZA_CONFIG_DIR}"
 elif [ "$(uname)" = "Darwin" ] && [ ! -d "${HOME}/Library/Application Support/eza" ]; then
   set -- "$@" "${HOME}/Library/Application Support/eza"
 elif [ "$(uname)" = "Linux" ] && [ -d "${XDG_DATA_HOME:-$HOME/.local/share}" ]; then
