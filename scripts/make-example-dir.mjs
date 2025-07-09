@@ -39,9 +39,10 @@ const dirnames = ['src'];
 
 fs.rmSync(examplePath, { force: true, recursive: true });
 fs.mkdirSync(examplePath, { recursive: true });
-filenames.forEach((filename) =>
-  fs.writeFileSync(path.join(examplePath, filename), '')
-);
+filenames.forEach((filename) => {
+  const count = Math.random() * 10_000 * (Math.random() > 0.5 ? 10_000 : 1);
+  fs.writeFileSync(path.join(examplePath, filename), '0'.repeat(count));
+});
 dirnames.forEach((dirname) =>
   fs.mkdirSync(path.join(examplePath, dirname), { recursive: true })
 );
