@@ -283,6 +283,9 @@ filenames:
   LICENSE-MIT:
     icon:
       glyph: 
+  UNLICENSE:
+    icon:
+      glyph: 
   theme.yaml:
     icon:
       glyph: 
