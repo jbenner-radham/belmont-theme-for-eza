@@ -1,5 +1,5 @@
 '*.md': markdownlint --fix
 '*.mjs': prettier --write
 '*.sh': npx shellcheck
-'*.{yaml,yml}': prettier --write
+'*.yaml': prettier --write
 package.json: sort-package-json

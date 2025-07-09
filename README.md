@@ -63,8 +63,8 @@ the steps below in the following order:
 5. If `$HOME/.config/eza/theme.yml` exists then it will be loaded.
 6. If `$HOME/.config/eza/theme.yaml` exists then it will be loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yml` into
-the desired location.
+Choose your destination from the above and then copy or symlink `theme.yaml`
+into the desired location.
 
 </details>
 
@@ -120,8 +120,8 @@ the steps below in the following order:
 4. If `$HOME/Library/Application Support/eza/theme.yaml` exists then it will be
    loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yml` into
-the desired location.
+Choose your destination from the above and then copy or symlink `theme.yaml`
+into the desired location.
 
 </details>
 
@@ -142,8 +142,8 @@ the desired location.
 3. If `%AppData%\eza\theme.yml` exists then it will be loaded.
 4. If `%AppData%\eza\theme.yaml` exists then it will be loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yml` into
-the desired location.
+Choose your destination from the above and then copy or symlink `theme.yaml`
+into the desired location.
 
 Upgrade
 -------

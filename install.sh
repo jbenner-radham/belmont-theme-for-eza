@@ -96,13 +96,13 @@ git clone --quiet https://github.com/jbenner-radham/belmont-theme-for-eza.git "$
 
 if [ -n "${EZA_CONFIG_DIR}" ]; then
   mkdir -p "${EZA_CONFIG_DIR}"
-  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yml" "${BELMONT_SYMLINK_TARGET}"
+  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yaml" "${BELMONT_SYMLINK_TARGET}"
 elif [ "$(uname)" = "Darwin" ]; then
   mkdir -p "${HOME}/Library/Application Support/eza"
-  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yml" "${BELMONT_SYMLINK_TARGET}"
+  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yaml" "${BELMONT_SYMLINK_TARGET}"
 elif [ "$(uname)" = "Linux" ]; then
   mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/eza"
-  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yml" "${BELMONT_SYMLINK_TARGET}"
+  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yaml" "${BELMONT_SYMLINK_TARGET}"
 fi
 
 printf "%sBelmont for eza installed successfully!%s\n" "$(tput bold)" "$(tput sgr0)"
