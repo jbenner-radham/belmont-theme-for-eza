@@ -212,6 +212,18 @@ filenames:
   .prettierrc.json5:
     icon:
       glyph: 
+  .prettierrc.js:
+    icon:
+      glyph: 
+  prettier.config.js:
+    icon:
+      glyph: 
+  .prettierrc.ts:
+    icon:
+      glyph: 
+  prettier.config.ts:
+    icon:
+      glyph: 
   .prettierrc.toml:
     icon:
       glyph: 
