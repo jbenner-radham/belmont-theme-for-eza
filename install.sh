@@ -41,12 +41,10 @@ if [ -n "${EZA_CONFIG_DIR}" ] && [ ! -d "${EZA_CONFIG_DIR}" ]; then
   set -- "$@" "${EZA_CONFIG_DIR}"
 elif [ "$(uname)" = "Darwin" ] && [ ! -d "${HOME}/Library/Application Support/eza" ]; then
   set -- "$@" "${HOME}/Library/Application Support/eza"
-elif [ "$(uname)" = "Linux" ] && [ -d "${XDG_DATA_HOME:-$HOME/.local/share}" ]; then
-  if [ ! -d "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" ]; then
-    set -- "$@" "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
-  fi
-elif [ "$(uname)" = "Linux" ]; then
-  set -- "$@" "${XDG_DATA_HOME:-$HOME/.local/share}" "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
+elif [ "$(uname)" = "Linux" ] && [ ! -d "${XDG_CONFIG_HOME:-$HOME/.config}" ]; then
+  set -- "$@" "${XDG_CONFIG_HOME:-$HOME/.config}" "${XDG_CONFIG_HOME:-$HOME/.config}/eza"
+elif [ "$(uname)" = "Linux" ] && [ ! -d "${XDG_CONFIG_HOME:-$HOME/.config}/eza" ]; then
+  set -- "$@" "${XDG_CONFIG_HOME:-$HOME/.config}/eza"
 fi
 
 BELMONT_SYMLINK_TARGET=""
