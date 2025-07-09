@@ -155,6 +155,7 @@ MD033:
   # Allowed elements
   allowed_elements:
     - details
+    - div
     - summary
 
 # MD034/no-bare-urls : Bare URL used : https://github.com/DavidAnson/markdownlint/blob/v0.38.0/doc/md034.md
@@ -189,7 +190,7 @@ MD040:
 # MD041/first-line-heading/first-line-h1 : First line in a file should be a top-level heading : https://github.com/DavidAnson/markdownlint/blob/v0.38.0/doc/md041.md
 MD041:
   # Allow content before first heading
-  allow_preamble: false
+  allow_preamble: true
   # RegExp for matching title in front matter
   front_matter_title: "^\\s*title\\s*[:=]"
   # Heading level
@@ -202,7 +203,7 @@ MD042: true
 MD043:
   # List of headings
   headings:
-    - '# belmont-theme-for-eza'
+    - '# Belmont Theme for Eza'
     - '## Install'
     - '*'
     - '## Upgrade'

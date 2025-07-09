@@ -1,10 +1,14 @@
-belmont-theme-for-eza
+<div align="center">
+
+Belmont Theme for Eza
 =====================
 
 An [eza](https://eza.rocks/) theme inspired by [Dracula](https://github.com/eza-community/eza-themes/)
 by [Preston Thorpe](https://github.com/PThorpe92).
 
 ![Example of the Belmont theme for eza.](images/example.png)
+
+</div>
 
 Install
 -------
