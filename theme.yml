@@ -197,6 +197,24 @@ filenames:
   .pre-commit-hooks.yaml:
     icon:
       glyph: 󰛢
+  .prettierrc:
+    icon:
+      glyph: 
+  .prettierrc.json:
+    icon:
+      glyph: 
+  .prettierrc.yml:
+    icon:
+      glyph: 
+  .prettierrc.yaml:
+    icon:
+      glyph: 
+  .prettierrc.json5:
+    icon:
+      glyph: 
+  .prettierrc.toml:
+    icon:
+      glyph: 
   .python-version:
     icon:
       glyph: 
