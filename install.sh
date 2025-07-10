@@ -81,7 +81,7 @@ if [ -n "$BELMONT_SYMLINK_TARGET" ]; then
   printf "\n"
 fi
 
-printf "Do you wish to proceed? [y/N]: "
+printf "Do you wish to proceed? (y/N): "
 read -r REPLY
 printf "\n"
 
