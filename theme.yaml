@@ -280,6 +280,9 @@ filenames:
   LICENSE.md:
     icon:
       glyph: 
+  LICENSE.rst:
+    icon:
+      glyph: 
   LICENSE.txt:
     icon:
       glyph: 
