@@ -13,7 +13,7 @@
   "license": "MIT",
   "author": "James Benner",
   "type": "module",
-  "main": "theme.yml",
+  "main": "theme.yaml",
   "scripts": {
     "make-example-dir": "node ./scripts/make-example-dir.mjs",
     "prepare": "husky",
