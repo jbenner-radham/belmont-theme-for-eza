@@ -190,6 +190,12 @@ broken_path_overlay:
   foreground: *DARK_BLUE
 
 filenames:
+  .gitlab-ci.yml:
+    icon:
+      glyph: 
+  .fleet:
+    icon:
+      glyph: 
   .idea:
     icon:
       glyph: 
