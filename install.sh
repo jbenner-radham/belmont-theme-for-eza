@@ -92,7 +92,9 @@ fi
 mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}"
 
 if [ ! -d "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" ]; then
-  git clone --quiet https://github.com/jbenner-radham/belmont-theme-for-eza.git "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
+  # Reference: https://stackoverflow.com/questions/1125476/retrieve-a-single-file-from-a-repository#answer-67409497
+  git clone --quiet --no-checkout --depth=1 --no-tags https://github.com/jbenner-radham/belmont-theme-for-eza.git "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
+  (cd "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" && git restore --staged theme.yaml && git checkout theme.yaml)
 fi
 
 if [ -n "${EZA_CONFIG_DIR}" ]; then
