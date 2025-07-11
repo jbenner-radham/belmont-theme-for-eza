@@ -3,8 +3,8 @@
 Belmont Theme for Eza
 =====================
 
-An [eza](https://eza.rocks/) theme inspired by [Dracula](https://github.com/eza-community/eza-themes/)
-by [Preston Thorpe](https://github.com/PThorpe92).
+_An [eza](https://eza.rocks/) theme inspired by [Dracula](https://github.com/eza-community/eza-themes/)
+by [Preston Thorpe](https://github.com/PThorpe92)._
 
 ![Example of the Belmont theme for eza.](images/example.png)
 
