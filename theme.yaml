@@ -57,31 +57,32 @@ size:
   minor:
     foreground: *PURPLE
   number_byte:
-    foreground: &LIGHT_GRAY '#cccccc'
+    foreground: &VERY_DARK_GRAY '#666666'
     is_bold: false
   number_kilo:
-    foreground: &ALT_VERY_LIGHT_GRAY_DARKER '#d9d9d9'
+    foreground: &DARK_GRAY '#999999'
     is_bold: false
   number_mega:
-    foreground: &ALT_VERY_LIGHT_GRAY_LIGHTER '#e5e5e5'
-    is_bold: true
+    foreground: &LIGHT_GRAY '#cccccc'
+    is_bold: false
   number_giga:
     foreground: &WHITE '#ffffff'
-    is_bold: true
+    is_bold: false
   number_huge:
-    foreground: &PALE_RED '#ffb6c1'
+    foreground: *WHITE
     is_bold: true
+    is_underline: true
   # I'm not really sure if these `unit_*` properties do anything.
   unit_byte:
-    foreground: *LIGHT_GRAY
+    foreground: *VERY_DARK_GRAY
   unit_kilo:
-    foreground: *ALT_VERY_LIGHT_GRAY_DARKER
+    foreground: *DARK_GRAY
   unit_mega:
-    foreground: *ALT_VERY_LIGHT_GRAY_LIGHTER
+    foreground: *LIGHT_GRAY
   unit_giga:
     foreground: *WHITE
   unit_huge:
-    foreground: *PALE_RED
+    foreground: *WHITE
 
 users:
   user_you:
