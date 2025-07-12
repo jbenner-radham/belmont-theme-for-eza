@@ -26,7 +26,7 @@ if [ -n "$EZA_COLORS" ]; then
   abort "The $(tput bold)\$EZA_COLORS$(tput sgr0) environment variable is set. This will override any theme file installation. Please unset it and try again."
 fi
 
-if ! command -v git > /dev/null; then
+if ! command -v git >/dev/null; then
   abort "The $(tput bold)git$(tput sgr0) binary cannot be found. Please install it or add it to your system path and retry."
 fi
 
@@ -90,23 +90,25 @@ if [ ! "$REPLY" = Y ] && [ ! "$REPLY" = y ]; then
   exit 0
 fi
 
+readonly BELMONT_SOURCE_FILE="theme.yaml"
+
 mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}"
 
 if [ ! -d "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" ]; then
   # Reference: https://stackoverflow.com/questions/1125476/retrieve-a-single-file-from-a-repository#answer-67409497
-  git clone --quiet --no-checkout --depth=1 --no-tags https://github.com/jbenner-radham/belmont-theme-for-eza.git "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
-  (cd "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" && git restore --staged theme.yaml && git checkout --quiet theme.yaml)
+  git clone --depth=1 --no-checkout --no-tags --quiet https://github.com/jbenner-radham/belmont-theme-for-eza.git "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
+  (cd "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}" && git restore --staged "${BELMONT_SOURCE_FILE}" && git checkout --quiet -- "${BELMONT_SOURCE_FILE}")
 fi
 
 if [ -n "${EZA_CONFIG_DIR}" ]; then
   mkdir -p "${EZA_CONFIG_DIR}"
-  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yaml" "${BELMONT_SYMLINK_TARGET}"
+  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/${BELMONT_SOURCE_FILE}" "${BELMONT_SYMLINK_TARGET}"
 elif [ "$(uname)" = "Darwin" ]; then
   mkdir -p "${HOME}/Library/Application Support/eza"
-  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yaml" "${BELMONT_SYMLINK_TARGET}"
+  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/${BELMONT_SOURCE_FILE}" "${BELMONT_SYMLINK_TARGET}"
 elif [ "$(uname)" = "Linux" ]; then
   mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/eza"
-  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/theme.yaml" "${BELMONT_SYMLINK_TARGET}"
+  ln -s "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}/${BELMONT_SOURCE_FILE}" "${BELMONT_SYMLINK_TARGET}"
 fi
 
 printf "%sBelmont for eza installed successfully!%s\n" "$(tput bold)" "$(tput sgr0)"
