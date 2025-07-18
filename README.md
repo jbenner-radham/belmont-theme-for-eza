@@ -32,7 +32,7 @@ sh -c "$(wget -qO - https://raw.githubusercontent.com/jbenner-radham/belmont-the
 
 ### Manual Install on Linux
 
-first navigate to [the **Belmont** theme file][BELMONT_THEME_FILE] and download
+First navigate to [the **Belmont** theme file][BELMONT_THEME_FILE] and download
 it.
 
 Next, `eza` will look for a theme using the steps below in the following order:
