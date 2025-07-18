@@ -8,6 +8,14 @@ set -o errexit
 
 printf "\n"
 
+if [ -n "${EZA_CONFIG_DIR}" ]; then
+  printf "\$EZA_CONFIG_DIR is set: %s" "${EZA_CONFIG_DIR}"
+else
+  printf "\$EZA_CONFIG_DIR is NOT set"
+fi
+
+exit 0
+
 # Taken from: https://github.com/Homebrew/install/blob/efda6e8a4623dd9a3046faf4991cbfb40bea8d17/install.sh#L9-L12
 abort() {
   printf "%s\n" "$@" >&2
