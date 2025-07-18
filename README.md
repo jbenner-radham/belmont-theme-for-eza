@@ -41,7 +41,7 @@ test -f "install.sh" && \
     " file being downloaded will now be named either \"install.sh.1\"" \
     " or some variant thereof." \
     "$(tput sgr0)"
-curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
+curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh
 ```
 
 Then inspect the downloaded `install.sh` file and resume with the following
@@ -100,7 +100,7 @@ test -f "install.sh" && \
     " file being downloaded will now be named either \"install.sh.1\"" \
     " or some variant thereof." \
     "$(tput sgr0)"
-curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/install-script-test/install.sh
+curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh
 ```
 
 Then inspect the downloaded `install.sh` file and resume with the following
