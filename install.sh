@@ -30,7 +30,7 @@ if ! command -v git >/dev/null; then
   abort "The $(tput bold)git$(tput sgr0) binary cannot be found. Please install it or add it to your system path and retry."
 fi
 
-BELMONT_REPO_NAME="belmont-theme-for-eza"
+readonly BELMONT_REPO_NAME="belmont-theme-for-eza"
 
 if [ ! -d "${XDG_DATA_HOME:-$HOME/.local/share}" ]; then
   set -- "${XDG_DATA_HOME:-$HOME/.local/share}" "${XDG_DATA_HOME:-$HOME/.local/share}/${BELMONT_REPO_NAME}"
