@@ -13,48 +13,35 @@ by [Preston Thorpe](https://github.com/PThorpe92)._
 Install
 -------
 
-### Linux
+### Automated Install on Linux and macOS
 
-If you have `git` installed you can run the following command to install the theme:
+If you have `git` installed you can run one of the following commands to install
+**Belmont**.
 
-```shell
-bash -c "$(curl -LSfs https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
-```
-
-> [!NOTE]
-> Using `bash` in the above command should be fine for most users. But, if
-> needed you can change it to the shell of your choice. Please note however,
-> that the install script requires a POSIX compatible shell.
-
-<details>
-
-<summary>Additional install methods.</summary>
-
-Alternatively, if you would like to inspect the install script before running
-it you can perform the following:
+#### Using cURL (`curl`)
 
 ```shell
-test -f "install.sh" && \
-  printf "%s%s%s%s%s\n\n" \
-    "$(tput bold)" \
-    "An \"install.sh\" file is already present in this directory. The" \
-    " file being downloaded will now be named either \"install.sh.1\"" \
-    " or some variant thereof." \
-    "$(tput sgr0)"
-curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh
+sh -c "$(curl -Sfs https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
 ```
 
-Then inspect the downloaded `install.sh` file and resume with the following
-(assuming your file is `install.sh` and not `install.sh.1` or some variant
-thereof):
+#### Using Wget (`wget`)
 
 ```shell
-chmod u+x install.sh
-./install.sh
+sh -c "$(wget -qO - https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
 ```
 
-If you prefer to install your theme manually, `eza` will look for a theme using
-the steps below in the following order:
+#### Using HTTPie (`http`)
+
+```shell
+sh -c "$(http --body https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
+```
+
+### Manual Install on Linux
+
+first navigate to [the **Belmont** theme file][BELMONT_THEME_FILE] and download
+it.
+
+Next, `eza` will look for a theme using the steps below in the following order:
 
 1. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yml` will be loaded
    if it exists.
@@ -67,53 +54,15 @@ the steps below in the following order:
 5. If `$HOME/.config/eza/theme.yml` exists then it will be loaded.
 6. If `$HOME/.config/eza/theme.yaml` exists then it will be loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yaml`
-into the desired location.
+Choose your destination from the above and then copy or symlink the **Belmont**
+theme file into the desired location.
 
-</details>
+### Manual Install on macOS
 
-### macOS
+First navigate to [the **Belmont** theme file][BELMONT_THEME_FILE] and download
+it.
 
-If you have `git` installed you can run the following command to install the theme:
-
-```shell
-zsh -c "$(curl -LSfs https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
-```
-
-> [!NOTE]
-> Using `zsh` in the above command should be fine for most users. But, if needed
-> you can change it to the shell of your choice. Please note however, that the
-> install script requires a POSIX compatible shell.
-
-<details>
-
-<summary>Additional install methods.</summary>
-
-Alternatively, if you would like to inspect the install script before running it
-you can perform the following:
-
-```shell
-test -f "install.sh" && \
-  printf "%s%s%s%s%s\n\n" \
-    "$(tput bold)" \
-    "An \"install.sh\" file is already present in this directory. The" \
-    " file being downloaded will now be named either \"install.sh.1\"" \
-    " or some variant thereof." \
-    "$(tput sgr0)"
-curl -LO --no-clobber https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh
-```
-
-Then inspect the downloaded `install.sh` file and resume with the following
-(assuming your file is `install.sh` and not `install.sh.1` or some variant
-thereof):
-
-```shell
-chmod u+x install.sh
-./install.sh
-```
-
-If you prefer to install your theme manually, `eza` will look for a theme using
-the steps below in the following order:
+Next, `eza` will look for a theme using the steps below in the following order:
 
 1. If `$EZA_CONFIG_DIR` is set then `$EZA_CONFIG_DIR/theme.yml` will be loaded
    if it exists.
@@ -124,10 +73,8 @@ the steps below in the following order:
 4. If `$HOME/Library/Application Support/eza/theme.yaml` exists then it will be
    loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yaml`
-into the desired location.
-
-</details>
+Choose your destination from the above and then copy or symlink the **Belmont**
+theme file into the desired location.
 
 ### Windows
 
@@ -137,7 +84,10 @@ into the desired location.
 > would care to confirm or deny the validity of these steps via an issue it
 > would be much appreciated.
 
-`eza` will look for a theme using the steps below in the following order:
+First navigate to [the **Belmont** theme file][BELMONT_THEME_FILE] and download
+it.
+
+Next, `eza` will look for a theme using the steps below in the following order:
 
 1. If `%EZA_CONFIG_DIR%` is set then `%EZA_CONFIG_DIR%\theme.yml` will be loaded
    if it exists.
@@ -146,16 +96,16 @@ into the desired location.
 3. If `%AppData%\eza\theme.yml` exists then it will be loaded.
 4. If `%AppData%\eza\theme.yaml` exists then it will be loaded.
 
-Choose your destination from the above and then copy or symlink `theme.yaml`
-into the desired location.
+Choose your destination from the above and then copy or symlink the **Belmont**
+theme file into the desired location.
 
 Upgrade
 -------
 
 ### Linux & macOS
 
-If you installed **Belmont** via one of the `install.sh` script methods, you can
-upgrade via the following:
+If you installed **Belmont** via an automated install method, you can upgrade
+via the following:
 
 ```shell
 cd "${XDG_DATA_HOME:-$HOME/.local/share}/belmont-theme-for-eza"
@@ -182,3 +132,5 @@ There are multiple environment variables that if set can override YAML based
 themes. If you're on Linux or macOS try running the `install.sh` script. It will
 check for common problems and notify you if it finds any. Including if any of
 the problematic environment variables are set.
+
+[BELMONT_THEME_FILE]: https://github.com/jbenner-radham/belmont-theme-for-eza/blob/main/theme.yaml
