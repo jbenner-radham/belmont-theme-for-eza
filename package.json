@@ -16,6 +16,7 @@
   "main": "theme.yaml",
   "scripts": {
     "make-example-dir": "node ./scripts/make-example-dir.mjs",
+    "make-release-artifacts": "node ./scripts/make-release-artifacts.mjs",
     "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
