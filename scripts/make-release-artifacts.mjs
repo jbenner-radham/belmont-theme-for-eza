@@ -5,26 +5,25 @@ import pkg from '../package.json' with { type: 'json' };
 
 const rootPath = path.resolve(import.meta.dirname, '..');
 const artifactsPath = path.resolve(rootPath, 'dist');
-const themeSourcePath = path.resolve(rootPath, pkg.main);
-const themeArtifactFilename = 'theme.yml';
-const themeArtifactPath = path.resolve(artifactsPath, themeArtifactFilename);
-const themeArtifactPrefix = `belmont-theme-for-eza-${pkg.version}`;
+const themePath = path.resolve(rootPath, pkg.main);
+const artifactThemeFilename = 'theme.yml';
+const artifactThemePath = path.resolve(artifactsPath, artifactThemeFilename);
+const artifactArchivePathStem = `belmont-theme-for-eza-${pkg.version}`;
 
 fs.rmSync(artifactsPath, { force: true, recursive: true });
 fs.mkdirSync(artifactsPath, { recursive: true });
-fs.copyFileSync(themeSourcePath, themeArtifactPath);
+fs.copyFileSync(themePath, artifactThemePath);
 
-const themeArtifactSrc = fs.readFileSync(themeArtifactPath).toString();
-const themeArtifactSrcPrefix = `# Belmont Theme for Eza v${pkg.version}\n\n`;
+const artifactThemeSrc = fs.readFileSync(artifactThemePath).toString();
+const artifactThemeSrcPrefix = `# Belmont Theme for Eza v${pkg.version}\n\n`;
 
-fs.writeFileSync(themeArtifactPath, themeArtifactSrcPrefix + themeArtifactSrc);
-
+fs.writeFileSync(artifactThemePath, artifactThemeSrcPrefix + artifactThemeSrc);
 childProcess.execSync(
-  `tar -czf ${themeArtifactPrefix}.tar.gz ${themeArtifactFilename}`,
+  `tar -czf ${artifactArchivePathStem}.tar.gz ${artifactThemeFilename}`,
   { cwd: artifactsPath }
 );
 childProcess.execSync(
-  `zip ${themeArtifactPrefix}.zip ${themeArtifactFilename}`,
+  `zip ${artifactArchivePathStem}.zip ${artifactThemeFilename}`,
   { cwd: artifactsPath }
 );
-fs.rmSync(themeArtifactPath, { force: true });
+fs.rmSync(artifactThemePath, { force: true });
