@@ -135,7 +135,7 @@ if [ ! -d "${DATA_HOME}/${BELMONT_REPO_NAME}" ]; then
     git checkout --quiet -- "${BELMONT_SOURCE_FILE}")
 fi
 
-if [ -n "${EZA_CONFIG_DIR}" ] || [ "$(uname)" = 'Darwin' ] ||
+if [ -n "${EZA_CONFIG_DIR:-}" ] || [ "$(uname)" = 'Darwin' ] ||
   [ "$(uname)" = 'Linux' ]
 then
   mkdir -p "$(dirname "${BELMONT_SYMLINK_TARGET}")"
