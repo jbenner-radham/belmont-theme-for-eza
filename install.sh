@@ -3,6 +3,9 @@ set -o errexit
 set -o noglob
 set -o nounset
 
+# Enable this to assist with debugging errors.
+# set -o xtrace
+
 # Reference:
 #   - https://unix.stackexchange.com/questions/65803/why-is-printf-better-than-echo
 #   - https://www.baeldung.com/linux/posix-shell-array
