@@ -28,6 +28,10 @@ has_command() {
 BOLD=
 RESET=
 
+# Enable text styling only if the following conditions are met:
+#   1. Standard output (file descriptor 1) is connected to the terminal.
+#   2. `NO_COLOR` is either unset or a zero-length string.
+#   3. `TERM` is not set to "dumb".
 if [ -t 1 ] && [ -z "${NO_COLOR:-}" ] && [ "${TERM:-}" != 'dumb' ]; then
   BOLD='[1m'
   RESET='[0m'
