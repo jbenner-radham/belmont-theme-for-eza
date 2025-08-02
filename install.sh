@@ -146,4 +146,3 @@ fi
 printf '%sBelmont for eza installed successfully!%s\n' \
   "${BOLD}" \
   "${RESET}"
-
