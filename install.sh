@@ -126,7 +126,7 @@ fi
 mkdir -p "${DATA_HOME}"
 
 if [ ! -d "${DATA_HOME}/${BELMONT_REPO_NAME}" ]; then
-  # Reference: https://stackoverflow.com/questions/1125476/retrieve-a-single-file-from-a-repository#answer-67409497
+  # Reference: https://tinyurl.com/single-file-checkout
   git clone --depth=1 --no-checkout --no-tags --quiet \
     https://github.com/jbenner-radham/belmont-theme-for-eza.git \
     "${DATA_HOME}/${BELMONT_REPO_NAME}"
