@@ -15,16 +15,16 @@ Install
 
 ### Automated Install on Linux and macOS
 
-If you have `git` installed you can run one of the following commands to install
+If you have Git installed you can run one of the following commands to install
 **Belmont**.
 
-#### Using cURL (`curl`)
+#### Using cURL (Installed by Default on macOS and Other Systems)
 
 ```shell
 sh -c "$(curl -Sfs https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
 ```
 
-#### Using Wget (`wget`)
+#### Using Wget (Installed by Default on Ubuntu and Other Systems)
 
 ```shell
 sh -c "$(wget -qO - https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
