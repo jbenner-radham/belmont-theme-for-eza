@@ -15,7 +15,7 @@ set -o nounset
 
 printf '\n'
 
-# Taken from: https://github.com/Homebrew/install/blob/efda6e8a4623dd9a3046faf4991cbfb40bea8d17/install.sh#L9-L12
+# Taken from: https://tinyurl.com/32fkyy8y
 abort() {
   printf '%s\n' "${*}" >&2
   exit 1
