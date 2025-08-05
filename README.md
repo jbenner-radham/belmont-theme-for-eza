@@ -30,6 +30,12 @@ sh -c "$(curl -Sfs https://raw.githubusercontent.com/jbenner-radham/belmont-them
 sh -c "$(wget -qO - https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
 ```
 
+#### Using Wget2 (Installed by Default on Fedora and Other Systems)
+
+```shell
+sh -c "$(wget2 -qO - https://raw.githubusercontent.com/jbenner-radham/belmont-theme-for-eza/refs/heads/main/install.sh)"
+```
+
 ### Manual Install on Linux
 
 First navigate to [the **Belmont** theme file][BELMONT_THEME_FILE] and download
